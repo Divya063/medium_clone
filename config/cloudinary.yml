@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: de4lgq66u
+  api_key: '329357595713844'
+  api_secret: 4sKaaJVgoYRFEpfLE9t7oYBrKQk
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: de4lgq66u
+  api_key: '329357595713844'
+  api_secret: 4sKaaJVgoYRFEpfLE9t7oYBrKQk
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: de4lgq66u
+  api_key: '329357595713844'
+  api_secret: 4sKaaJVgoYRFEpfLE9t7oYBrKQk
+  enhance_image_tag: true
+  static_file_support: false
