@@ -12,6 +12,10 @@
   <body>
     <header>
      <%= link_to "Write a story", new_post_path %>
+     </header>
+     # from devise gem
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
