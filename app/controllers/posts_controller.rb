@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+    before_action :authenticate_user!
     def new
-        @post = Post.new
+        @post = current_user.posts.new
     end
 
     def create 
