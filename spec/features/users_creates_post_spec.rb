@@ -2,12 +2,9 @@ require "rails_helper"
 
 RSpec.describe "Creating post" do
     let(:user) { create(:user)}
-    before do
-        @user = User.create!(email: "example@gmail.com", password: "password", password_confirmation: "password")
-    end
 
     scenario "successfully" do
-        sign_in @user
+        sign_in user
         visit root_path
         click_on "Write a story"
 
@@ -22,7 +19,7 @@ RSpec.describe "Creating post" do
     end
 
     scenario "unsuccessfully" do
-        sign_in @user
+        sign_in user
         visit root_path
         click_on "Write a story"
 
