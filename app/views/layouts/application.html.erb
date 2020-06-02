@@ -12,6 +12,9 @@
   <body>
     <header>
      <%= link_to "Write a story", new_post_path %>
+     <% if user_signed_in? %>
+      <%= current_user.email %>
+    <% end %>
      </header>
      # from devise gem
      <p class="notice"><%= notice %></p>
