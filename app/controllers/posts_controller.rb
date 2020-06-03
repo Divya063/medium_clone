@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!
     def new
-        @post = current_user.posts.new
+        @post = Post.new
     end
 
     def create 
-
-        @post = Post.new(post_params)
+        @post = current_user.posts.new(post_params)
         if @post.save
             redirect_to root_url
         else
@@ -17,7 +16,7 @@ class PostsController < ApplicationController
 
     private
         def post_params
-            params.require(:post).permit(:title, :body)
+            params.require(:post).permit(:title, :body, :all_tags)
         end
     
 end
